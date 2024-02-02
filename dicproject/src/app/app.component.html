@@ -1,0 +1,167 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<div class="container-fluid my-3 row text-light">
+  <form (ngSubmit)="SubmitForm()" style="border-radius: 6px; background-color: darkslateblue;" [formGroup]="DetailsForm" class="col-4 offset-2">
+    <div class="form-group p-2">
+      <label for="Age" class="pb-1">Age</label>
+      <input type="number" class="form-control" id="Age" formControlName="Age" placeholder="Enter Age.">
+    </div>
+    <div class="form-group p-2">
+      <label for="Gender" class="pb-1">Select your gender.</label>
+      <select class="form-control" id="Gender" formControlName="Gender">
+        <option value="0">Male</option>
+        <option value="1">Female</option>
+      </select>
+    </div>
+    <div class="form-group p-2">
+      <label for="DepCount" class="pb-1">Number of Dependents.</label>
+      <select class="form-control" id="DepCount" formControlName="DepCount">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+    <div class="form-group p-2">
+      <label for="MonBook" class="pb-1">Months on the Book.</label>
+      <input type="number" class="form-control" id="MonBook" formControlName="MonBook" placeholder="Enter the number of months they've been with the Bank">
+    </div>
+    <div class="form-group p-2">
+      <label for="TotRelCount" class="pb-1">Total Relationship Count.</label>
+      <select class="form-control" id="TotRelCount" formControlName="TotRelCnt">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select>
+    </div>
+    <div class="form-group p-2">
+      <label for="MonInactCount" class="pb-1">Number of Months inactive in the past year.</label>
+      <select class="form-control" id="MonInactCount" formControlName="MonInactCnt">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+      </select>
+    </div>
+    <div class="form-group p-2">
+      <label for="CredLim" class="pb-1">Credit Limit.</label>
+      <input type="number" class="form-control" id="CredLim" formControlName="CredLim" placeholder="Enter the Credit Limit.">
+    </div>
+    <div class="form-group p-2">
+      <label for="TotRevBal" class="pb-1">Total Revolving Balance.</label>
+      <input type="number" class="form-control" id="TotRevBal" formControlName="TotRevBal" placeholder="Enter the total revolving balance.">
+    </div>
+    <div class="form-group p-2">
+      <label for="TotAmtChng" class="pb-1">Total Amount Change Q4 Q1.</label>
+      <input type="number" class="form-control" id="TotAmtChng" formControlName="TotAmtChng" placeholder="Enter the total amount changed from Q4 to Q1.">
+    </div>
+    <div class="form-group p-2">
+      <label for="TotTransAmt" class="pb-1">Total Transaction Amount.</label>
+      <input type="number" class="form-control" id="TotTransAmt" formControlName="TotTransAmt" placeholder="Enter the Total Transaction Amount.">
+    </div>
+    <div class="form-group p-2">
+      <label for="TotTransCnt" class="pb-1">Total Transaction Count.</label>
+      <input type="number" class="form-control" id="TotTransCnt" formControlName="TotTransCnt" placeholder="Enter the Total Transaction Count.">
+    </div>
+    <div class="form-group p-2">
+      <label for="TotCntChng" class="pb-1">Total Count Change Q4 Q1.</label>
+      <input type="number" class="form-control" id="TotCntChng" formControlName="TotCntChng" placeholder="Enter the total count changed from Q4 to Q1.">
+    </div>
+    <div class="form-group p-2">
+      <label for="AvgUtil" class="pb-1">Average Utilization Ratio.</label>
+      <input type="number" class="form-control" id="AvgUtil" formControlName="AvgUtil" placeholder="Enter the average utilization ratio, between 0 to 1.">
+    </div>
+    <div class="form-group p-2">
+      <label for="EduLvl" class="pb-1">Education Level.</label>
+      <select class="form-control" id="EduLvl" formControlName="EduLvl">
+        <option value="3">HighSchool</option>
+        <option value="0">College</option>
+        <option value="2">Graduate</option>
+        <option value="5">Post-Graduate</option>
+        <option value="1">Doctorate</option>
+        <option value="6">Uneducated</option>
+        <option value="4">Other</option>
+      </select>
+    </div>
+    <div class="form-group p-2">
+      <label for="Marital" class="pb-1">Marital Status.</label>
+      <select class="form-control" id="Marital" formControlName="Marital">
+        <option value="2">Single</option>
+        <option value="1">Married</option>
+        <option value="0">Divorced</option>
+        <option value="3">Unknown</option>
+      </select>
+    </div>
+    <div class="form-group p-2">
+      <label for="IncCat" class="pb-1">Income Category.</label>
+      <select class="form-control" id="IncCat" formControlName="IncCat">
+        <option value="4">Less than 40K</option>
+        <option value="1">40K-60K</option>
+        <option value="2">60K-80K</option>
+        <option value="3">80K-120K</option>
+        <option value="0">120K+</option>
+        <option value="5">Unknown</option>
+      </select>
+    </div>
+    <div class="form-group p-2">
+      <label for="CardCat" class="pb-1">Card Category.</label>
+      <select class="form-control" id="CardCat" formControlName="CardCat">
+        <option value="0">Blue</option>
+        <option value="3">Silver</option>
+        <option value="1">Gold</option>
+        <option value="2">Platinum</option>
+      </select>
+    </div>
+    <button type="submit" class="container btn btn-block mb-3" style="background-color: deepskyblue">Submit</button>
+    <div class="m-2 p-2">
+      <label class="btn btn-default p-0">
+        <input type="file" (change)="selectFile($event)" />
+      </label>
+    </div>
+  </form>
+  <div class="col-4 sticky-top mb-auto" *ngIf="showRes">
+    <div class="mt-4 p-5 bg-success text-white rounded">
+      <h2>{{pred}}</h2>
+    </div>
+    <img [src]="imgURL" class="img img-thumbnail mt-2">
+    <img src="../assets/imp2.png" class="img img-thumbnail mt-2">
+  </div>
+  <div class="col-4 sticky-top mb-auto" *ngIf="showResMul">
+    <ul class="mt-4 p-1 bg-success text-white rounded" *ngFor="let val of predVals">
+      <li>{{val}}</li>
+    </ul>
+    <img [src]="imgURL2" class="img img-thumbnail mt-2">
+    <img src="../assets/imp2.png" class="img img-thumbnail mt-2">
+  </div>
+</div>
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+<!-- <router-outlet></router-outlet> -->

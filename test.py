@@ -1,0 +1,23 @@
+import sys
+import RandomForestGS
+
+age = int(sys.argv[1])
+gender = int(sys.argv[2])
+dep_count = int(sys.argv[3])
+months_book = int(sys.argv[4])
+tot_rel_count = int(sys.argv[5])
+months_inactive = int(sys.argv[6])
+cred_lim = float(sys.argv[7])
+tot_rev_bal = int(sys.argv[8])
+tot_amt_chng_q4_q1 = float(sys.argv[9])
+tot_trans_amt = int(sys.argv[10])
+tot_trans_count = int(sys.argv[11])
+tot_ct_chng_q4_q1 = float(sys.argv[12])
+avg_util_ratio = float(sys.argv[13])
+edu_level = int(sys.argv[14])
+marital_status = int(sys.argv[15])
+income_cat = int(sys.argv[16])
+card_cat = int(sys.argv[17])
+# print(age, gender, dep_count, months_book, tot_rel_count, months_inactive, cred_lim, tot_rev_bal, tot_amt_chng_q4_q1, tot_trans_amt, tot_trans_count, tot_ct_chng_q4_q1, avg_util_ratio, edu_level, marital_status, income_cat, card_cat)
+print(RandomForestGS.predict(age, gender, dep_count, months_book, tot_rel_count, months_inactive, cred_lim, tot_rev_bal, tot_amt_chng_q4_q1, tot_trans_amt, tot_trans_count, tot_ct_chng_q4_q1, avg_util_ratio, edu_level, marital_status, income_cat, card_cat))
+sys.stdout.flush()
